@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="main.css">
+		<style>
+
+		</style>
+    </head>
+    <body style="overflow:hidden">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<audio id="#audio" controls autoplay preload><source src="" type="audio/mpeg">
+			Your browser does not support the audio tag.
+        </audio>
+		<div id="header">
+			<a href="/mu">MU</a>
+		</div>
+		<div id="input-holder">
+			<div class="close"></div>
+			<input autofocus type="text" autocomplete="off" name="search" placeholder="Search for a Song, Lyric or Artist" />
+		</div>
+        <div id="container"></div>
+<!--
+        <div id="recent">
+            <h2>Recently Played</h2>
+            <li></li>
+        </div>
+-->
+		<div id="player">
+			<div class="play-pause">
+				<i class="fa fa-play"></i>
+			</div>
+			<div class="track-title">
+				Search for a song...
+			</div>
+			<div id="progress">
+				<div id="fill"></div>
+			</div>
+			<div class="time">
+				<span class="current">0:00</span><br><span class="full">0:00</span>
+			</div>
+		</div>
+        <script>
+            //Init jQuery
+            $ = require('./js/jquery.min.js');
+        </script>	
+		<script src="main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-33047077-2','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
