@@ -30,7 +30,8 @@ $(function() {
                 var images = '';
                 $.each(data,function(i,el){
                     var url = 'http://youtubeinmp3.com/fetch/?video=http://www.youtube.com' + data[i].href.replace('file://','');
-                    s += '<div class="row" style="display:none;"><div class="title">' + data[i].innerHTML + '</div><div class="play" data-count="' + i + '" data-title="' + data[i].innerHTML + '" data-mp3="' + url + '"><i class="fa fa-play"></i></div></div>';
+                    s += '<div class="row" data-count="' + i + '" data-title="' + data[i].innerHTML + '" data-mp3="' + url +
+                    '" style="display:none;"><div class="title">' + data[i].innerHTML + '</div></div>';
                     images += '<div class="img" style="background:url() 50% 50% / cover no-repeat" onload="$(this).fadeIn();" />';
                 });
                 
@@ -44,7 +45,7 @@ $(function() {
                     d = d + 50;
                 });
                 if(play){
-                    $('.play:eq(0)').click();
+                    $('.row:eq(0)').click();
                 }
             });
         }else{
@@ -88,7 +89,7 @@ $(function() {
 		pWidth = $pro.width(),
 		fWidth = $('#fill').width();
 
-	$('#container').on("click", ".play", function() {
+	$('#container').on("click", ".row", function() {
         count = parseInt($(this).data('count'));
 		reset($(this).data('mp3'), $(this).data('title'));
 	});
@@ -97,9 +98,9 @@ $(function() {
 		onTrackedVideoFrame(this.currentTime, this.duration);
 
 		if (!this.paused) {
-			$('.play-pause').find('.fa').removeClass('fa-play').addClass('fa-pause');
+			$('.play-pause').addClass('pause');
 		} else {
-			$('.play-pause').find('.fa').removeClass('fa-pause').addClass('fa-play');
+			$('.play-pause').removeClass('pause');
 		}
 	});
 
@@ -150,15 +151,23 @@ $(function() {
 		}
 	});
 	$audio.onplaying = function() {
-		$('.play-pause').html('<i class="fa fa-pause"></i>');
+        $('.play-pause').empty();
+		$('.play-pause').removeClass('loading');
 	};
 	$audio.onloadstart = function() {
-		$('.play-pause').html('<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>');
+        if($('audio').attr('src').length > 0){
+          $('.play-pause').addClass('loading');
+		  $('.play-pause').html('<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>');
+        }
 	};
 	$audio.onended = function() {
         var i = parseInt(count) + 1;
-        $('.play:eq('+ i +')').trigger("click");
+        $('.row:eq('+ i +')').trigger("click");
     }
+    
+    $('.time').click(function(){
+       reset(); 
+    });
 
 	/*  			$('audio').bind('canplay',function() {
 this.currentTime = parseFloat($('#player').data('sec')); // jumps to 29th secs
@@ -171,13 +180,12 @@ this.currentTime = parseFloat($('#player').data('sec')); // jumps to 29th secs
 			$b.removeClass('search');
 			$el.html('');
 			$('input').val('');
-		}else{
-			$('audio').attr('src', mp3);
-			$('#audio').attr('data-track', title);
-			$('.track-title').html(title);
-			$('.play-pause').find('.fa').removeClass('fa-pause').addClass('fa-play');
-			$('#fill').width(0);
-			$('.time').html('<span class="current">0:00</span><br><span class="full">0:00</span>');
 		}
+        $('#audio').attr('data-track', title);
+        $('audio').attr('src', mp3);
+        $('.track-title').html(title);
+        $('.play-pause').removeClass('pause');
+        $('#fill').width(0);
+        $('.time').html('<span class="current">0:00</span><br><span class="full">0:00</span>');
 	}
 });
