@@ -1,5 +1,12 @@
 {
   "name"    : "Mu - Song Search",
+  "description": "A simple mac app to listen to youtube videos as mp3's",
   "version" : "1.0.0",
-  "main"    : "load.js"
+  "main"    : "load.js",
+  "author"  : "Louis Dickinson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LoueeD/Mu.git"
+  },
+  "license" : "MIT"
 }
