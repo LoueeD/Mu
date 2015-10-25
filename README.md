@@ -7,6 +7,8 @@ audio file from the youtubeinmp3.com, this file is loaded into the hidden audio 
 the fixed player at the bottom of the application.
 #Installation
 You can download the packaged Mac App [Here](http://louisdickinson.com/mu/Mu.dmg).
+
+Windows will be available soon.
 ## Disclaimer
 Downloading copyrighted material may be illegal in your country. Use at your own risk.
 
