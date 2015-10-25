@@ -8,7 +8,7 @@ displays back the inks and titles of each result. The results contains a play bu
 audio file from the youtubeinmp3.com, this file is loaded into the hidden audio tag and can be controlled from 
 the fixed player at the bottom of the application.
 #Installation
-You can download the packaged Mac App [Here](http://louisdickinson.com/mu/Mu.dmg).
+You can download the packaged Mac App [Here](http://louisdickinson.com/mu).
 
 Windows will be available soon.
 ## Disclaimer
@@ -16,6 +16,11 @@ Downloading copyrighted material may be illegal in your country. Use at your own
 
 Mu doesnt host any audio files, these files are being fetched from the youtubeinmp3 api online.
 Mu is NOT associated with youtube or youtubeinmp3, this application is a proof of concept.
+
+Copyrighted material is not allowed to be downloaded.
+The downloads are requested by the user, please read about [DMCA](http://www.dmca.com/).
+All files are for your personal use only.
+Videos will be forbidden upon your request. Read more about your [privacy](http://youtubeinmp3.com/privacy/).
 ## The MIT License
 > Copyright (c) 2015 Louis Dickinson http://louisdickinson.com
 
