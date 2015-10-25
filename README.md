@@ -5,6 +5,8 @@ The Application is relatively simple, it searches youtube for the song you want 
 displays back the inks and titles of each result. The results contains a play button that requests the 
 audio file from the youtubeinmp3.com, this file is loaded into the hidden audio tag and can be controlled from 
 the fixed player at the bottom of the application.
+#Installation
+You can download the packaged Mac App [Here](http://louisdickinson.com/mu/Mu.dmg).
 ## Disclaimer
 Downloading copyrighted material may be illegal in your country. Use at your own risk.
 
