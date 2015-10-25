@@ -7,6 +7,9 @@ audio file from the youtubeinmp3.com, this file is loaded into the hidden audio 
 the fixed player at the bottom of the application.
 ## Disclaimer
 Downloading copyrighted material may be illegal in your country. Use at your own risk.
+
+Mu doesnt host any audio files, these files are being fetched from the youtubeinmp3 api online.
+Mu is NOT associated with youtube or youtubeinmp3, this application is a proof of concept.
 ## The MIT License
 > Copyright (c) 2015 Louis Dickinson http://louisdickinson.com
 
